@@ -58,6 +58,21 @@ android {
             signingConfig signingConfigs.debug
         }
     }
+
+    flavorDimensions "app"
+
+    productFlavors {
+        dev {
+            dimension "app"
+            resValue "string", "app_name", "Flutter Clean Arch dev"
+            applicationId "com.kopailo.flutter_clean_arch.dev"
+        }
+        prod {
+            dimension "app"
+            resValue "string", "app_name", "Flutter Clean Arch"
+            applicationId "com.kopailo.flutter_clean_arch"
+        }
+    }
 }
 
 flutter {
