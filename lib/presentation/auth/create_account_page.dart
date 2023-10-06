@@ -1,13 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/base_widgets/app_bars/static_back_app_bar_with_button.dart';
-import 'package:flutter_clean_arch/base_widgets/buttons/primary_button.dart';
-import 'package:flutter_clean_arch/base_widgets/scroll_widgets/custom_expanded_scroll_view.dart';
-import 'package:flutter_clean_arch/base_widgets/text_fields/auth_input_field.dart';
-import 'package:flutter_clean_arch/core/style/paddings.dart';
-import 'package:flutter_clean_arch/core/translations/local_keys.g.dart';
-import 'package:flutter_clean_arch/presentation/auth/components/terms_and_policy_link.dart';
+import 'package:weatherapp/base_widgets/app_bars/static_back_app_bar_with_button.dart';
+import 'package:weatherapp/base_widgets/buttons/primary_button.dart';
+import 'package:weatherapp/base_widgets/scroll_widgets/custom_expanded_scroll_view.dart';
+import 'package:weatherapp/base_widgets/text_fields/auth_input_field.dart';
+import 'package:weatherapp/core/style/paddings.dart';
+import 'package:weatherapp/core/translations/local_keys.g.dart';
+import 'package:weatherapp/presentation/auth/components/terms_and_policy_link.dart';
 
 @RoutePage()
 class CreateAccountPage extends StatefulWidget {

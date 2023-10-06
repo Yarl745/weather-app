@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/style/border_radiuses.dart';
-import 'package:flutter_clean_arch/core/style/colors/colors.dart';
-import 'package:flutter_clean_arch/core/style/text_styles.dart';
+import 'package:weatherapp/core/style/border_radiuses.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
+import 'package:weatherapp/core/style/text_styles.dart';
 
 class PrimaryButton extends StatelessWidget {
   const PrimaryButton({

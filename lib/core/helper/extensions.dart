@@ -2,49 +2,28 @@ import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
 
-extension DoubleExtension on double {
+extension DoubleExt on double {
   String get decimalZeroFormat {
-    return this.toStringAsFixed(this.truncateToDouble() == this ? 0 : 1);
+    return toStringAsFixed(truncateToDouble() == this ? 0 : 1);
   }
 }
 
-extension CapExtension on String {
-  String get capitalize => isEmpty
-      ? ""
-      : "${this[0].toUpperCase()}${this.substring(1).toLowerCase()}";
-
-  String get inCaps => '${this[0].toUpperCase()}${this.substring(1)}';
-
-  String get capitalizeFirstOfEach =>
-      this.split(" ").map((str) => str.capitalize).join(" ");
-}
-
-extension ConversionExt on String {
-  double toDoubleIncludingInt() {
-    return (double.tryParse(this) ?? int.tryParse(this)?.toDouble() ?? 0);
-  }
-}
-
-extension LinearGradientExtension on LinearGradient {
+extension LinearGradientExt on LinearGradient {
   LinearGradient copyWith({
     Alignment? begin,
     Alignment? end,
   }) {
     return LinearGradient(
-        begin: begin ?? this.begin,
-        end: end ?? this.end,
-        colors: this.colors,
-        stops: this.stops,
-        tileMode: this.tileMode);
+        begin: begin ?? this.begin, end: end ?? this.end, colors: colors, stops: stops, tileMode: tileMode);
   }
 
   LinearGradient get rotation90 {
     return LinearGradient(
       begin: Alignment.centerRight,
       end: Alignment.centerLeft,
-      colors: this.colors,
-      stops: this.stops,
-      tileMode: this.tileMode,
+      colors: colors,
+      stops: stops,
+      tileMode: tileMode,
     );
   }
 
@@ -52,9 +31,9 @@ extension LinearGradientExtension on LinearGradient {
     return LinearGradient(
       begin: end,
       end: begin,
-      colors: this.colors,
-      stops: this.stops,
-      tileMode: this.tileMode,
+      colors: colors,
+      stops: stops,
+      tileMode: tileMode,
     );
   }
 
@@ -62,9 +41,9 @@ extension LinearGradientExtension on LinearGradient {
     return LinearGradient(
       begin: Alignment.centerLeft,
       end: Alignment.centerRight,
-      colors: this.colors,
-      stops: this.stops,
-      tileMode: this.tileMode,
+      colors: colors,
+      stops: stops,
+      tileMode: tileMode,
     );
   }
 }
@@ -93,6 +72,6 @@ extension DateTimeExt on DateTime {
   }
 
   DateTime zeroTime() {
-    return DateTime(this.year, this.month, this.day);
+    return DateTime(year, month, day);
   }
 }

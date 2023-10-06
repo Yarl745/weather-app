@@ -1,10 +1,10 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_clean_arch/core/error/exceptions.dart';
-import 'package:flutter_clean_arch/core/error/failures.dart';
-import 'package:flutter_clean_arch/core/error/repository_request_handler.dart';
-import 'package:flutter_clean_arch/core/helper/type_aliases.dart';
-import 'package:flutter_clean_arch/features/user_session/data/datasource/user_session_cache_datasource.dart';
-import 'package:flutter_clean_arch/features/user_session/domain/repositories/user_session_repository.dart';
+import 'package:weatherapp/core/error/exceptions.dart';
+import 'package:weatherapp/core/error/failures.dart';
+import 'package:weatherapp/core/error/repository_request_handler.dart';
+import 'package:weatherapp/core/helper/type_aliases.dart';
+import 'package:weatherapp/features/user_session/data/datasource/user_session_cache_datasource.dart';
+import 'package:weatherapp/features/user_session/domain/repositories/user_session_repository.dart';
 
 class UserSessionRepositoryImpl extends UserSessionRepository {
   UserSessionRepositoryImpl({required this.userSessionCacheDatasource});

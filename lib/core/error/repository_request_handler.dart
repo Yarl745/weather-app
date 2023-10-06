@@ -1,5 +1,5 @@
 import 'package:dartz/dartz.dart';
-import 'package:flutter_clean_arch/core/helper/type_aliases.dart';
+import 'package:weatherapp/core/helper/type_aliases.dart';
 
 import 'exceptions.dart';
 import 'failures.dart';

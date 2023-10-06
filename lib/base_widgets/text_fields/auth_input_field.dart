@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/base_widgets/buttons/icon_buttons/custom_icon_button.dart';
-import 'package:flutter_clean_arch/core/style/colors/colors.dart';
-import 'package:flutter_clean_arch/core/style/input_decorations.dart';
-import 'package:flutter_clean_arch/core/style/text_styles.dart';
+import 'package:weatherapp/base_widgets/buttons/icon_buttons/custom_icon_button.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
+import 'package:weatherapp/core/style/input_decorations.dart';
+import 'package:weatherapp/core/style/text_styles.dart';
 import 'package:rxdart/rxdart.dart';
 
 class AuthInputField extends StatefulWidget {

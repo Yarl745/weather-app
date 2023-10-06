@@ -1,6 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
-import 'package:flutter_clean_arch/features/user_session/domain/repositories/user_session_repository.dart';
+import 'package:weatherapp/features/user_session/domain/repositories/user_session_repository.dart';
 
 part 'onboarding_status_state.dart';
 

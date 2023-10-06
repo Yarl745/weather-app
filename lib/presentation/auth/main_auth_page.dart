@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:icons_plus/icons_plus.dart';
-import 'package:flutter_clean_arch/base_widgets/scroll_widgets/custom_expanded_scroll_view.dart';
-import 'package:flutter_clean_arch/presentation/auth/components/continue_with_service_button.dart';
-import 'package:flutter_clean_arch/presentation/auth/components/main_auth_text.dart';
-import 'package:flutter_clean_arch/presentation/auth/components/terms_and_policy_link.dart';
+import 'package:weatherapp/base_widgets/scroll_widgets/custom_expanded_scroll_view.dart';
+import 'package:weatherapp/presentation/auth/components/continue_with_service_button.dart';
+import 'package:weatherapp/presentation/auth/components/main_auth_text.dart';
+import 'package:weatherapp/presentation/auth/components/terms_and_policy_link.dart';
 
 @RoutePage()
 class MainAuthPage extends StatefulWidget {

@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/helper/widget_ext.dart';
-import 'package:flutter_clean_arch/core/style/text_styles.dart';
-import 'package:flutter_clean_arch/core/translations/local_keys.g.dart';
+import 'package:weatherapp/core/helper/widget_ext.dart';
+import 'package:weatherapp/core/style/text_styles.dart';
+import 'package:weatherapp/core/translations/local_keys.g.dart';
 
 class TermsAndPolicyLink extends StatelessWidget {
   const TermsAndPolicyLink({Key? key, this.onTap}) : super(key: key);

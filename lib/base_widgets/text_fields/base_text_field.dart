@@ -2,7 +2,7 @@ import 'dart:ui' as ui show BoxHeightStyle, BoxWidthStyle;
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/style/colors/color_themes.dart';
+import 'package:weatherapp/core/style/colors/color_themes.dart';
 
 class BaseTextField extends TextField {
   // @override

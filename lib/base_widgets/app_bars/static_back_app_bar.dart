@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/base_widgets/app_bars/static_app_bar.dart';
-import 'package:flutter_clean_arch/base_widgets/buttons/icon_buttons/back_icon_button.dart';
-import 'package:flutter_clean_arch/core/style/text_styles.dart';
+import 'package:weatherapp/base_widgets/app_bars/static_app_bar.dart';
+import 'package:weatherapp/base_widgets/buttons/icon_buttons/back_icon_button.dart';
+import 'package:weatherapp/core/style/text_styles.dart';
 
 class StaticBackAppBar extends StatelessWidget implements PreferredSizeWidget {
   const StaticBackAppBar({

@@ -1,8 +1,8 @@
 import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/helper/hive_names.dart';
-import 'package:flutter_clean_arch/features/user_session/injection_container.dart';
+import 'package:weatherapp/core/helper/hive_names.dart';
+import 'package:weatherapp/features/user_session/injection_container.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';

@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/base_widgets/buttons/primary_button_with_logo.dart';
-import 'package:flutter_clean_arch/core/style/colors/colors.dart';
-import 'package:flutter_clean_arch/core/style/paddings.dart';
-import 'package:flutter_clean_arch/core/translations/local_keys.g.dart';
+import 'package:weatherapp/base_widgets/buttons/primary_button_with_logo.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
+import 'package:weatherapp/core/style/paddings.dart';
+import 'package:weatherapp/core/translations/local_keys.g.dart';
 
 class ContinueWithServiceButton extends StatelessWidget {
   const ContinueWithServiceButton({

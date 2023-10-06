@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/style/colors/colors.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
 
 class CustomIconButton extends StatelessWidget {
   const CustomIconButton({

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/style/colors/colors.dart';
-import 'package:flutter_clean_arch/core/util/pixel_sizer.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class SvgIconButton extends StatelessWidget {
@@ -42,15 +41,15 @@ class SvgIconButton extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.all(padding ?? 6.0),
           child: SizedBox(
-            width: size.pMax,
-            height: size.pMax,
+            width: size,
+            height: size,
             child: FittedBox(
               fit: BoxFit.scaleDown,
               child: SvgPicture.asset(
                 iconPath,
                 color: color ?? Clr.of(context).black,
-                height: size.pw,
-                width: size.pw,
+                height: size,
+                width: size,
               ),
             ),
           ),

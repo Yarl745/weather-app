@@ -1,5 +1,5 @@
 import 'package:flutter/services.dart';
-import 'package:flutter_clean_arch/core/helper/extensions.dart';
+import 'package:weatherapp/core/helper/string_ext.dart';
 
 class CapitalizeTextFormatter extends TextInputFormatter {
   @override

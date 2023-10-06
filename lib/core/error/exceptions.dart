@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_clean_arch/core/error/server_error.dart';
-import 'package:flutter_clean_arch/core/network/network_info.dart';
-import 'package:flutter_clean_arch/injection_container.dart';
+import 'package:weatherapp/core/error/server_error.dart';
+import 'package:weatherapp/core/network/network_info.dart';
+import 'package:weatherapp/injection_container.dart';
 
 import 'failures.dart';
 

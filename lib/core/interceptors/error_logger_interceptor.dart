@@ -1,6 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:fimber/fimber.dart';
-import 'package:flutter_clean_arch/core/helper/type_aliases.dart';
+import 'package:weatherapp/core/helper/type_aliases.dart';
 
 class ErrorLoggerInterceptor extends Interceptor {
   @override

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/style/colors/colors.dart';
-import 'package:flutter_clean_arch/core/util/pixel_sizer.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 // Custom Icon
@@ -21,15 +20,15 @@ class CIcon extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: size.ph,
-      height: size.ph,
+      width: size,
+      height: size,
       child: FittedBox(
         fit: BoxFit.scaleDown,
         child: SvgPicture.asset(
           iconPath,
           color: color ?? Clr.of(context).black,
-          height: size.pw,
-          width: size.pw,
+          height: size,
+          width: size,
         ),
       ),
     );

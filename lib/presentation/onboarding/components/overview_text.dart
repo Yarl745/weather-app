@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/style/paddings.dart';
-import 'package:flutter_clean_arch/core/style/text_styles.dart';
+import 'package:weatherapp/core/style/paddings.dart';
+import 'package:weatherapp/core/style/text_styles.dart';
 
 class OverviewText extends StatelessWidget {
   const OverviewText({Key? key, required this.title, required this.description}) : super(key: key);

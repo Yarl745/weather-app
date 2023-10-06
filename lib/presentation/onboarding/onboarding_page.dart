@@ -1,15 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_clean_arch/core/style/colors/colors.dart';
-import 'package:flutter_clean_arch/core/translations/local_keys.g.dart';
-import 'package:flutter_clean_arch/core/util/image_cacher.dart';
-import 'package:flutter_clean_arch/features/user_session/cubits/onboarding_status_cubit/onboarding_status_cubit.dart';
-import 'package:flutter_clean_arch/injection_container.dart';
-import 'package:flutter_clean_arch/presentation/onboarding/components/continue_button.dart';
-import 'package:flutter_clean_arch/presentation/onboarding/components/overview_image.dart';
-import 'package:flutter_clean_arch/presentation/onboarding/components/overview_text.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
+import 'package:weatherapp/core/translations/local_keys.g.dart';
+import 'package:weatherapp/core/util/image_cacher.dart';
+import 'package:weatherapp/features/user_session/cubits/onboarding_status_cubit/onboarding_status_cubit.dart';
+import 'package:weatherapp/injection_container.dart';
+import 'package:weatherapp/presentation/onboarding/components/continue_button.dart';
+import 'package:weatherapp/presentation/onboarding/components/overview_image.dart';
+import 'package:weatherapp/presentation/onboarding/components/overview_text.dart';
 
 @RoutePage()
 class OnboardingPage extends StatefulWidget {

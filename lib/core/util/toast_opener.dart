@@ -1,7 +1,7 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 
-void showNotification(
+void showToast(
   Widget notification, {
   Duration duration = const Duration(seconds: 3),
 }) {
@@ -12,6 +12,6 @@ void showNotification(
   );
 }
 
-void closeNotification() {
+void closeToasts() {
   BotToast.cleanAll();
 }

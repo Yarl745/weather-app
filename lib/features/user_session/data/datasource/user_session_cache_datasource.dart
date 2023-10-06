@@ -1,4 +1,4 @@
-import 'package:flutter_clean_arch/core/helper/hive_names.dart';
+import 'package:weatherapp/core/helper/hive_names.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 
 abstract class UserSessionCacheDatasource {

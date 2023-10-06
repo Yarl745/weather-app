@@ -1,4 +1,4 @@
-# flutter_clean_arch
+# weatherapp
 
 A new Flutter project.
 

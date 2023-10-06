@@ -23,7 +23,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.kopailo.flutter_clean_arch.flutter_clean_arch"
+    namespace "com.kopailo.weatherapp"
     compileSdkVersion flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -42,7 +42,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.kopailo.flutter_clean_arch.flutter_clean_arch"
+        applicationId "com.kopailo.weatherapp"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
@@ -65,12 +65,12 @@ android {
         dev {
             dimension "app"
             resValue "string", "app_name", "Flutter Clean Arch dev"
-            applicationId "com.kopailo.flutter_clean_arch.dev"
+            applicationId "com.kopailo.weatherapp.dev"
         }
         prod {
             dimension "app"
             resValue "string", "app_name", "Flutter Clean Arch"
-            applicationId "com.kopailo.flutter_clean_arch"
+            applicationId "com.kopailo.weatherapp"
         }
     }
 }

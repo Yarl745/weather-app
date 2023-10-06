@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_clean_arch/features/user_session/cubits/onboarding_status_cubit/onboarding_status_cubit.dart';
-import 'package:flutter_clean_arch/injection_container.dart';
-import 'package:flutter_clean_arch/router/router.gr.dart';
+import 'package:weatherapp/features/user_session/cubits/onboarding_status_cubit/onboarding_status_cubit.dart';
+import 'package:weatherapp/injection_container.dart';
+import 'package:weatherapp/router/router.gr.dart';
 
 class OnboardingGuard extends AutoRouteGuard {
   @override

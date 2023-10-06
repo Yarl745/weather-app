@@ -1,7 +1,6 @@
 import 'package:auto_route/auto_route.dart';
-import 'package:flutter_clean_arch/presentation/auth/create_account_page.dart';
-import 'package:flutter_clean_arch/router/router.gr.dart';
-import 'package:flutter_clean_arch/router/router_guards.dart';
+import 'package:weatherapp/router/router.gr.dart';
+import 'package:weatherapp/router/router_guards.dart';
 
 @RoutePage(name: 'MainAppRouter')
 class MainAppRouterPage extends AutoRouter {
@@ -13,6 +12,8 @@ class AuthRouterPage extends AutoRouter {
   const AuthRouterPage({super.key});
 }
 
+/// Generate router code
+/// flutter pub run build_runner watch --delete-conflicting-outputs
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
 class AppRouter extends $AppRouter {
   // @override
