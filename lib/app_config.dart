@@ -1,19 +1,19 @@
 import 'package:fimber/fimber.dart';
 
 enum Configs {
-  local,
   dev,
   prod,
-  staging,
 }
 
 abstract class AppConfig {
   AppConfig._({
     required this.apiHostName,
+    required this.mapboxAccessToken,
     required this.isProductionEnvironment,
   });
 
   final String apiHostName;
+  final String mapboxAccessToken;
   final bool isProductionEnvironment;
 
   String get api => 'http://$apiHostName';
@@ -22,9 +22,7 @@ abstract class AppConfig {
 
   static AppConfig get _getForFlavor {
     Configs flavor = Configs.values.firstWhere(
-      (e) =>
-          e.toString() ==
-          "Configs.${const String.fromEnvironment('envFlavour', defaultValue: 'prod')}",
+      (e) => e.toString() == "Configs.${const String.fromEnvironment('envFlavour', defaultValue: 'prod')}",
     );
 
     switch (flavor) {
@@ -46,6 +44,8 @@ class DevConfig extends AppConfig {
       : super._(
           apiHostName: 'dev.com',
           isProductionEnvironment: false,
+          mapboxAccessToken:
+              'pk.eyJ1IjoiamFyZWRrb3BhbG8iLCJhIjoiY2xuZnJkMXY3MGN3bDJpbWlhZ3lzenBjdCJ9.frn6WJVQJW09G_luUvhgpg',
         );
 }
 
@@ -54,5 +54,7 @@ class ProdConfig extends AppConfig {
       : super._(
           apiHostName: 'prod.com',
           isProductionEnvironment: true,
+          mapboxAccessToken:
+              'pk.eyJ1IjoiamFyZWRrb3BhbG8iLCJhIjoiY2xuZnJkMXY3MGN3bDJpbWlhZ3lzenBjdCJ9.frn6WJVQJW09G_luUvhgpg',
         );
 }

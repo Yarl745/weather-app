@@ -66,7 +66,7 @@ class _OnboardingPageState extends State<OnboardingPage> {
 
     if (sliderController.page == sliderTitleText.length - 1) {
       await sl<OnboardingStatusCubit>().setUserIsOnboarded(true);
-      context.router.pushNamed("/auth");
+      context.router.pushNamed("/weather-map");
     }
   }
 
