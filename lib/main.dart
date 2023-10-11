@@ -5,10 +5,10 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:weatherapp/core/style/colors/colors.dart';
 import 'package:weatherapp/core/style/theme.dart';
 import 'package:weatherapp/router/router.dart';
-import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'app_config.dart';
 import 'injection_container.dart';
