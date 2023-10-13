@@ -14,6 +14,7 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return AutoTabsScaffold(
+      extendBody: true,
       routes: const [
         WeatherMapRoute(),
         WeatherCityFinderRoute(),

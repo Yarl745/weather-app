@@ -9,11 +9,13 @@ abstract class AppConfig {
   AppConfig._({
     required this.apiHostName,
     required this.mapboxAccessToken,
+    required this.customMapStylePath,
     required this.isProductionEnvironment,
   });
 
   final String apiHostName;
   final String mapboxAccessToken;
+  final String customMapStylePath;
   final bool isProductionEnvironment;
 
   String get api => 'http://$apiHostName';
@@ -46,6 +48,7 @@ class DevConfig extends AppConfig {
           isProductionEnvironment: false,
           mapboxAccessToken:
               'pk.eyJ1IjoiamFyZWRrb3BhbG8iLCJhIjoiY2xuZnJkMXY3MGN3bDJpbWlhZ3lzenBjdCJ9.frn6WJVQJW09G_luUvhgpg',
+          customMapStylePath: 'mapbox://styles/jaredkopalo/clnog92sg00ba01qq4v71an8n',
         );
 }
 
@@ -56,5 +59,6 @@ class ProdConfig extends AppConfig {
           isProductionEnvironment: true,
           mapboxAccessToken:
               'pk.eyJ1IjoiamFyZWRrb3BhbG8iLCJhIjoiY2xuZnJkMXY3MGN3bDJpbWlhZ3lzenBjdCJ9.frn6WJVQJW09G_luUvhgpg',
+          customMapStylePath: 'mapbox://styles/jaredkopalo/clnog92sg00ba01qq4v71an8n',
         );
 }
