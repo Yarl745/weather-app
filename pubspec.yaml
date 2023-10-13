@@ -82,15 +82,12 @@ flutter:
     - assets/translations/
     - fonts/
 
-    #fonts:
-    # - family: Montserrat
-    #   fonts:
-    #     - asset: fonts/Montserrat-Regular.ttf
-    #       weight: 400
-    #     - asset: fonts/Montserrat-Medium.ttf
-    #       weight: 500
-    #     - asset: fonts/Montserrat-Bold.ttf
-    #       weight: 700
-    #     - asset: fonts/Montserrat-Black.ttf
-    #       weight: 900
-
+  fonts:
+    - family: Inter
+      fonts:
+        - asset: fonts/Inter-Regular.ttf
+          weight: 400
+        - asset: fonts/Inter-Medium.ttf
+          weight: 500
+        - asset: fonts/Inter-Bold.ttf
+          weight: 700
