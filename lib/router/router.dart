@@ -11,6 +11,11 @@ class WeatherMapRouterPage extends AutoRouter {
   const WeatherMapRouterPage({super.key});
 }
 
+@RoutePage(name: 'WeatherCityFinderRouter')
+class WeatherCityFinderRouterPage extends AutoRouter {
+  const WeatherCityFinderRouterPage({super.key});
+}
+
 /// Generate router code
 /// dart run build_runner watch --delete-conflicting-outputs
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
@@ -24,7 +29,6 @@ class AppRouter extends $AppRouter {
       path: '/',
       page: MainAppRouter.page,
       children: [
-        // RedirectRoute(path: '', redirectTo: 'weather-map'),
         AutoRoute(
           path: '',
           initial: true,
@@ -40,7 +44,15 @@ class AppRouter extends $AppRouter {
             ),
             AutoRoute(
               path: 'weather-city-finder',
-              page: WeatherCityFinderRoute.page,
+              page: WeatherCityFinderRouter.page,
+              children: [
+                AutoRoute(path: '', page: CityForecastRoute.page),
+                CustomRoute(
+                  path: 'search',
+                  page: CitySearchRoute.page,
+                  transitionsBuilder: (context, animation, secondaryAnimation, child) => child,
+                ),
+              ],
             ),
           ],
         ),

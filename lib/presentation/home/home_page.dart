@@ -1,5 +1,6 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:weatherapp/core/style/colors/colors.dart';
 import 'package:weatherapp/router/router.gr.dart';
 
 @RoutePage()
@@ -16,8 +17,8 @@ class _HomePageState extends State<HomePage> {
     return AutoTabsScaffold(
       extendBody: true,
       routes: const [
-        WeatherMapRoute(),
-        WeatherCityFinderRoute(),
+        WeatherMapRouter(),
+        WeatherCityFinderRouter(),
       ],
       bottomNavigationBuilder: (_, tabsRouter) {
         return BottomNavigationBar(
@@ -27,6 +28,7 @@ class _HomePageState extends State<HomePage> {
           ],
           currentIndex: tabsRouter.activeIndex,
           onTap: tabsRouter.setActiveIndex,
+          backgroundColor: Clr.of(context).surfaceContainerHigh,
         );
       },
     );
