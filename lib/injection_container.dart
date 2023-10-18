@@ -1,12 +1,13 @@
 import 'package:dio/dio.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:weatherapp/core/helper/hive_names.dart';
-import 'package:weatherapp/features/user_session/injection_container.dart';
 import 'package:get_it/get_it.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:internet_connection_checker/internet_connection_checker.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
+import 'package:weatherapp/core/helper/hive_consts.dart';
+import 'package:weatherapp/features/places_search/injection_container.dart';
+import 'package:weatherapp/features/weather_search/injection_container.dart';
 
 import 'app_config.dart';
 import 'core/interceptors/error_logger_interceptor.dart';
@@ -16,35 +17,27 @@ final sl = GetIt.instance;
 
 const globalDio = 'global';
 
-class InjectionContainer extends Injector with UserSessionInjector {}
+class InjectionContainer extends Injector with PlacesSearchInjector, WeatherSearchInjector {}
 
 abstract class Injector {
   @mustCallSuper
   Future<void> init() async {
-    // final String currentTimeZone = await FlutterNativeTimezone.getLocalTimezone();
-
     await EasyLocalization.ensureInitialized();
     await Hive.initFlutter();
 
     sl.registerSingleton<Box>(
-      await Hive.openBox(HiveNames.userSessionDataBox),
-      instanceName: HiveNames.userSessionDataBox,
+      await Hive.openBox(CHive.placeDetailedInfoDataBox),
+      instanceName: CHive.placeDetailedInfoDataBox,
     );
-    // sl<Box>(instanceName: HiveNames.userSessionDataBox).clear();
 
     sl.registerLazySingleton<AppConfig>(() => AppConfig.init);
 
     sl.registerLazySingleton<Dio>(
       () {
-        final dio = Dio(BaseOptions(
-          baseUrl: sl<AppConfig>().api,
-          connectTimeout: const Duration(milliseconds: 15000),
-          receiveTimeout: const Duration(milliseconds: 15000),
-        ));
+        final dio = Dio();
         dio.options.headers = {
           "content-type": "application/json",
           "Accept": "application/json",
-          // "App-Timezone": currentTimeZone
         };
         dio.interceptors.add(ErrorLoggerInterceptor());
         if (!sl<AppConfig>().isProductionEnvironment) {
@@ -60,7 +53,10 @@ abstract class Injector {
     );
 
     //External
-    sl.registerLazySingleton(() => InternetConnectionChecker());
+    sl.registerLazySingleton(() => InternetConnectionChecker.createInstance(
+          checkTimeout: const Duration(seconds: 2),
+          checkInterval: const Duration(seconds: 3),
+        ));
 
     //Core
     sl.registerLazySingleton<NetworkInfo>(() => NetworkInfoImpl(sl()));
