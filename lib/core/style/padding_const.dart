@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 
-// Custom Paddings
-abstract class CPaddings {
+/// Const Paddings
+abstract class CPadding {
   // Zero padding
   static const EdgeInsets zero = EdgeInsets.zero;
 
