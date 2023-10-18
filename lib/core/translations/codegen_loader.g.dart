@@ -14,29 +14,6 @@ class CodegenLoader extends AssetLoader{
     return Future.value(mapLocales[locale.toString()]);
   }
 
-  static const Map<String,dynamic> en = {
-  "and": "and",
-  "booksIn15Minutes": "Books in 15 minutes",
-  "byContinuingYouAgreeTo": "By continuing, you agree to our",
-  "continueLabel": "Continue",
-  "continueWith": "Continue with",
-  "createAnAccount": "Create an account",
-  "easy": "easy",
-  "email": "Email",
-  "fun": "fun",
-  "getStarted": "Get started",
-  "logIn": "Log in",
-  "logInToPersonalizeYourExperience": "Log in to personalize your experience and track your progress",
-  "name": "Name",
-  "password8Characters": "Password (8+ characters)",
-  "personalReadingPlan": "Personal reading plan",
-  "privacyPolicy": "Privacy Policy",
-  "readListenAndWatch": "Read, listen and watch anywhere",
-  "readingBecomes": "Reading becomes",
-  "setYourReadingGoalsAndAccept": "Set your reading goals and accept a personalized challenge",
-  "termsConditions": "Terms & Conditions",
-  "weReadTheBestBooksHighlight": "We read the best books, highlight key ideas and insights, create summaries and visual narratives for you",
-  "youCanReadListenAndWatchSameTime": "You can read, listen and watch at the same time without the Internet connection"
-};
+  static const Map<String,dynamic> en = {};
 static const Map<String, Map<String,dynamic>> mapLocales = {"en": en};
 }

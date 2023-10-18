@@ -45,7 +45,7 @@ android {
         applicationId "com.kopailo.weatherapp"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
-        minSdkVersion flutter.minSdkVersion
+        minSdkVersion 21
         targetSdkVersion flutter.targetSdkVersion
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
@@ -64,12 +64,12 @@ android {
     productFlavors {
         dev {
             dimension "app"
-            resValue "string", "app_name", "Flutter Clean Arch dev"
+            resValue "string", "app_name", "Weather App dev"
             applicationId "com.kopailo.weatherapp.dev"
         }
         prod {
             dimension "app"
-            resValue "string", "app_name", "Flutter Clean Arch"
+            resValue "string", "app_name", "Weather App"
             applicationId "com.kopailo.weatherapp"
         }
     }

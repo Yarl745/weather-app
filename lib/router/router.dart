@@ -1,19 +1,23 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:weatherapp/router/router.gr.dart';
-import 'package:weatherapp/router/router_guards.dart';
 
 @RoutePage(name: 'MainAppRouter')
 class MainAppRouterPage extends AutoRouter {
   const MainAppRouterPage({super.key});
 }
 
-@RoutePage(name: 'AuthRouter')
-class AuthRouterPage extends AutoRouter {
-  const AuthRouterPage({super.key});
+@RoutePage(name: 'WeatherMapRouter')
+class WeatherMapRouterPage extends AutoRouter {
+  const WeatherMapRouterPage({super.key});
+}
+
+@RoutePage(name: 'WeatherCityFinderRouter')
+class WeatherCityFinderRouterPage extends AutoRouter {
+  const WeatherCityFinderRouterPage({super.key});
 }
 
 /// Generate router code
-/// flutter pub run build_runner watch --delete-conflicting-outputs
+/// dart run build_runner watch --delete-conflicting-outputs
 @AutoRouterConfig(replaceInRouteName: 'Page,Route')
 class AppRouter extends $AppRouter {
   // @override
@@ -25,25 +29,32 @@ class AppRouter extends $AppRouter {
       path: '/',
       page: MainAppRouter.page,
       children: [
-        RedirectRoute(path: '', redirectTo: 'home'),
         AutoRoute(
-          path: 'onboarding',
-          page: OnboardingRoute.page,
-        ),
-        AutoRoute(
-          path: 'auth',
-          page: AuthRouter.page,
-          guards: [OnboardingGuard()],
-          children: [
-            AutoRoute(path: '', page: MainAuthRoute.page),
-            AutoRoute(path: 'create-account', page: CreateAccountRoute.page),
-            // AutoRoute(path: 'login', page: MainAuthRoute.page),
-          ],
-        ),
-        AutoRoute(
-          path: 'home',
+          path: '',
+          initial: true,
           page: HomeRoute.page,
-          guards: [AuthGuard()],
+          guards: const [],
+          children: [
+            AutoRoute(
+              path: 'weather-map',
+              page: WeatherMapRouter.page,
+              children: [
+                AutoRoute(path: '', page: WeatherMapRoute.page),
+              ],
+            ),
+            AutoRoute(
+              path: 'weather-city-finder',
+              page: WeatherCityFinderRouter.page,
+              children: [
+                AutoRoute(path: '', page: CityForecastRoute.page),
+                CustomRoute(
+                  path: 'search',
+                  page: CitySearchRoute.page,
+                  transitionsBuilder: (context, animation, secondaryAnimation, child) => child,
+                ),
+              ],
+            ),
+          ],
         ),
       ],
     ),
