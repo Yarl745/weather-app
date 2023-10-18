@@ -65,14 +65,26 @@ class Clr extends InheritedWidget {
     return oldWidget.isDarkMode != isDarkMode;
   }
 
+  Color get primary => isDarkMode ? DarkTheme.primary : LightTheme.primary;
+  Color get onPrimary => isDarkMode ? DarkTheme.onPrimary : LightTheme.onPrimary;
+  Color get secondary => isDarkMode ? DarkTheme.secondary : LightTheme.secondary;
+  Color get onSecondary => isDarkMode ? DarkTheme.onSecondary : LightTheme.onSecondary;
+  Color get primaryContainer => isDarkMode ? DarkTheme.primaryContainer : LightTheme.primaryContainer;
+  Color get onPrimaryContainer => isDarkMode ? DarkTheme.onPrimaryContainer : LightTheme.onPrimaryContainer;
+  Color get surface => isDarkMode ? DarkTheme.surface : LightTheme.surface;
+  Color get onSurface => isDarkMode ? DarkTheme.onSurface : LightTheme.onSurface;
+  Color get surfaceContainer => isDarkMode ? DarkTheme.surfaceContainer : LightTheme.surfaceContainer;
+  Color get onSurfaceContainer => isDarkMode ? DarkTheme.onSurfaceContainer : LightTheme.onSurfaceContainer;
+  Color get surfaceContainerHigh => isDarkMode ? DarkTheme.surfaceContainerHigh : LightTheme.surfaceContainerHigh;
+  Color get onSurfaceContainerHigh => isDarkMode ? DarkTheme.onSurfaceContainerHigh : LightTheme.onSurfaceContainerHigh;
+  Color get surfaceContainerHighest =>
+      isDarkMode ? DarkTheme.surfaceContainerHighest : LightTheme.surfaceContainerHighest;
+  Color get onSurfaceContainerHighest =>
+      isDarkMode ? DarkTheme.onSurfaceContainerHighest : LightTheme.onSurfaceContainerHighest;
+  Color get surfaceVariant => isDarkMode ? DarkTheme.surfaceVariant : LightTheme.surfaceVariant;
+  Color get onSurfaceVariant => isDarkMode ? DarkTheme.onSurfaceVariant : LightTheme.onSurfaceVariant;
+  Color get outline => isDarkMode ? DarkTheme.outline : LightTheme.outline;
+  Color get outlineVariant => isDarkMode ? DarkTheme.outlineVariant : LightTheme.outlineVariant;
   Color get black => isDarkMode ? DarkTheme.black : LightTheme.black;
   Color get white => isDarkMode ? DarkTheme.white : LightTheme.white;
-  Color get mainBlue => isDarkMode ? DarkTheme.mainBlue : LightTheme.mainBlue;
-  Color get darkBlue => isDarkMode ? DarkTheme.darkBlue : LightTheme.darkBlue;
-  Color get mainGrey => isDarkMode ? DarkTheme.mainGrey : LightTheme.mainGrey;
-  Color get lightGrey => isDarkMode ? DarkTheme.lightGrey : LightTheme.lightGrey;
-  Color get shadedWhite => isDarkMode ? DarkTheme.shadedWhite : LightTheme.shadedWhite;
-  Color get bgDarkGrey => isDarkMode ? DarkTheme.bgDarkGrey : LightTheme.bgDarkGrey;
-  Color get red => isDarkMode ? DarkTheme.red : LightTheme.red;
-  Color get gray => isDarkMode ? DarkTheme.gray : LightTheme.gray;
 }
