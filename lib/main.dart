@@ -7,7 +7,9 @@ import 'package:flutter/services.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:weatherapp/core/style/colors/colors.dart';
-import 'package:weatherapp/core/style/theme.dart';
+import 'package:weatherapp/core/style/theme_const.dart';
+import 'package:weatherapp/features/places_search/cubits/places_search_cubit/places_search_cubit.dart';
+import 'package:weatherapp/features/weather_search/cubits/city_forecast_cubit/city_forecast_cubit.dart';
 import 'package:weatherapp/router/router.dart';
 
 import 'app_config.dart';
@@ -19,6 +21,7 @@ void main() async {
   await InjectionContainer().init();
 
   sl<AppConfig>();
+
   runApp(
     ResponsiveSizer(
       builder: (context, orientation, screenType) {
@@ -27,7 +30,7 @@ void main() async {
           path: 'assets/translations',
           fallbackLocale: const Locale('en'),
           child: const ClrThemeWidget(
-            isDarkTheme: true,
+            isDarkTheme: false,
             child: MyApp(),
           ),
         );
@@ -48,11 +51,19 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
+    super.initState();
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
     if (Platform.isAndroid) {
       FlutterAppBadger.removeBadge();
     }
-    super.initState();
+    preloadWeatherData();
+  }
+
+  void preloadWeatherData() async {
+    final lastPlaceInfo = await sl<PlacesSearchCubit>().getLastSearchedPlace();
+    await sl<CityForecastCubit>().searchWeakCityWeatherForecast(
+      latLng: lastPlaceInfo.latLng,
+    );
   }
 
   @override
@@ -64,8 +75,6 @@ class _MyAppState extends State<MyApp> {
       supportedLocales: context.supportedLocales,
       locale: context.locale,
       theme: CTheme.getAppTheme(context),
-      // routerDelegate: appRouter.delegate(),
-      // routeInformationParser: appRouter.defaultRouteParser(),
       routerConfig: appRouter.config(
         navigatorObservers: () => [BotToastNavigatorObserver()],
       ),

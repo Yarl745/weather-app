@@ -3,14 +3,14 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:weatherapp/core/style/colors/colors.dart';
 
-const _fontSfPro = 'SF pro';
+const _fontInter = 'Inter';
 
-CTextStyle get sfPro => const SfPro();
+CTextStyle get inter => const Inter();
 
-class SfPro extends CTextStyle {
-  const SfPro()
+class Inter extends CTextStyle {
+  const Inter()
       : super._(
-          fontFamily: _fontSfPro,
+          fontFamily: _fontInter,
           fontSize: 14.0,
           // height: 1.35,
         );
@@ -107,6 +107,12 @@ class CTextStyle extends TextStyle {
 
   CTextStyle get s52 => copyWith(fontSize: 52);
 
+  CTextStyle get s56 => copyWith(fontSize: 56);
+
+  CTextStyle get s60 => copyWith(fontSize: 60);
+
+  CTextStyle get s64 => copyWith(fontSize: 64);
+
   // weights
   CTextStyle get w100 => copyWith(fontWeight: FontWeight.w100);
 
@@ -126,19 +132,23 @@ class CTextStyle extends TextStyle {
   CTextStyle get italic => copyWith(fontStyle: FontStyle.italic);
 
   // colors
+  CTextStyle primary(BuildContext context) => copyWith(color: Clr.of(context).primary);
+
+  CTextStyle onPrimary(BuildContext context) => copyWith(color: Clr.of(context).onPrimary);
+
+  CTextStyle onPrimaryContainer(BuildContext context) => copyWith(color: Clr.of(context).onPrimaryContainer);
+
+  CTextStyle onSurface(BuildContext context) => copyWith(color: Clr.of(context).onSurface);
+
+  CTextStyle onSurfaceContainer(BuildContext context) => copyWith(color: Clr.of(context).onSurfaceContainer);
+
+  CTextStyle onSurfaceContainerHigh(BuildContext context) => copyWith(color: Clr.of(context).onSurfaceContainerHigh);
+
+  CTextStyle onSurfaceVariant(BuildContext context) => copyWith(color: Clr.of(context).onSurfaceVariant);
+
   CTextStyle white(BuildContext context) => copyWith(color: Clr.of(context).white);
 
   CTextStyle black(BuildContext context) => copyWith(color: Clr.of(context).black);
-
-  CTextStyle mainBlue(BuildContext context) => copyWith(color: Clr.of(context).mainBlue);
-
-  CTextStyle darkBlue(BuildContext context) => copyWith(color: Clr.of(context).darkBlue);
-
-  CTextStyle mainGrey(BuildContext context) => copyWith(color: Clr.of(context).mainGrey);
-
-  CTextStyle lightGrey(BuildContext context) => copyWith(color: Clr.of(context).lightGrey);
-
-  CTextStyle shadedWhite(BuildContext context) => copyWith(color: Clr.of(context).shadedWhite);
 
   // heights
   CTextStyle get h13 => copyWith(height: 1.35);
